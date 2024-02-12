@@ -117,7 +117,7 @@ https://www.figma.com/file/BdHqSv3tc7VbeuidRCBWNA/How-to-solve-it-%3F?type=desig
 ■ インフラ:
 ・ Webアプリケーションサーバ: Render
 ・ セッションサーバ: Redis（Redis by Upstash）(予定)
-・ データベースサーバ: PostgreSQL
+・ データベースサーバ: PostgreSQL(render内)
 ■ その他：
 ・ VCS: GitHub
 ・ CI/CD: GitHubActions
