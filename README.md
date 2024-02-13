@@ -113,7 +113,7 @@ https://www.figma.com/file/BdHqSv3tc7VbeuidRCBWNA/How-to-solve-it-%3F?type=desig
 
 ■ サーバサイド: Ruby on Rails 7.0.4 Ruby 3.2.2
 ■ フロントエンド: Hotwire
-■ CSSフレームワーク: bootstrap5系
+■ CSSフレームワーク: bootstrap
 ■ インフラ:
 ・ Webアプリケーションサーバ: Render
 ・ セッションサーバ: Redis（Redis by Upstash）(予定)
