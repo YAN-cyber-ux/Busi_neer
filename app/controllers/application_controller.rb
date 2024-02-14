@@ -1,6 +1,3 @@
 class ApplicationController < ActionController::Base
-
-  def hello
-    render html: "hello, world!"
-  end
+  add_flash_types :success, :info, :warning, :danger
 end

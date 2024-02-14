@@ -4,14 +4,15 @@ class UserSessionsController < ApplicationController
   def create
     @user = login(params[:email], params[:password])
     if @user
-      redirect_back_or_to root_path
+      redirect_back_or_to root_path, status: :see_other, flash: { success: t('.success') }
     else
-      render :new
+      flash.now[:danger] = t('.failure')
+      render :new, status: :unauthorized
     end
   end
 
   def destroy
     logout
-    redirect_to root_path status: :see_other
+    redirect_to root_path, status: :see_other, flash: { success: t('.success') }
   end
 end
