@@ -10,7 +10,11 @@ class UserDecorator < ApplicationDecorator
   #     end
   #   end
 
-  def full_name
-    "#{object.last_name} #{object.first_name}"
+  # def full_name
+  #   "#{object.last_name} #{object.first_name}"
+  # end
+
+  def nickname
+    "#{object.nickname}"
   end
 end
