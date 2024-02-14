@@ -16,6 +16,7 @@ gem "sqlite3",         "1.6.1"
 
 gem 'sorcery', '0.16.5'
 gem 'pry-byebug'
+gem 'rails-i18n'
 
 group :development, :test do
   gem "debug",   "1.7.1", platforms: %i[ mri mingw x64_mingw ]
