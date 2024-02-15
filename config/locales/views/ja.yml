@@ -5,6 +5,8 @@ ja:
     logout: 'ログアウト'
     message:
       require_login: 'ログインが必要です'
+      created: "%{item}を作成しました"
+      not_created: "%{item}の作成に失敗しました"
   users:
     new:
       title: 'ユーザー登録'
