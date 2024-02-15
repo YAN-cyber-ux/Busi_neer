@@ -10,10 +10,10 @@ class EssayQuestionAnswersController < ApplicationController
   def create
     @essay_question_answer = current_user.essay_question_answers.build(essay_question_answer_params)
     if @essay_question_answer.save
-      redirect_to essay_question_answers_path, status: :see_other flash: { success: t('defaults.message.created'), item: EssayQuestionAnswer.model_name.human }
+      redirect_to essay_question_answers_path, status: :see_other, flash: { success: t('defaults.message.created', item: EssayQuestionAnswer.model_name.human) }
     else
-      flash.now[:danger] = t('defaults.message.not_created', item: Board.model_name.human)
-      render :new status: :unprocessable_entity
+      flash.now[:danger] = t('defaults.message.not_created', item: EssayQuestionAnswer.model_name.human)
+      render :new, status: :unprocessable_entity
     end
   end
 

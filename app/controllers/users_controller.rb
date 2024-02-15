@@ -2,15 +2,15 @@ class UsersController < ApplicationController
   skip_before_action :require_login, only: %i[new create]
   
   def new
-    @user = User.new
+    @user = User.new 
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to login_path
+      redirect_to login_path #まだフラッシュメッセージ表示されず。
     else
-      render :new
+      render :new #まだエラーメッセージ表示されず。
     end
   end
 
