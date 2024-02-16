@@ -1,8 +1,11 @@
 <ul class='crud-menu-btn list-inline float-right'>
   <li class="list-inline-item">
-    <%= link_to '編集', '#', id: "button-edit-#{essay_question_answer.id}" %>
+    <%= link_to '編集', edit_essay_question_answer_path(essay_question_answer), id: "button-edit-#{essay_question_answer.id}" %>
   </li>
   <li class="list-inline-item">
-    <%= link_to '削除', '#', id: "button-delete-#{essay_question_answer.id}" %>
+    <%= link_to '削除', essay_question_answer_path(essay_question_answer), id: "button-delete-#{essay_question_answer.id}", data: {
+      turbo_method: :delete,
+      turbo_confirm: "本当に削除しますか？",
+    }%>
   </li>
 </ul>

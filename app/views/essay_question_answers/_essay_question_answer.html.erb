@@ -6,7 +6,7 @@
         <h4 class="card-title">
         <%= link_to essay_question_answer.title, essay_question_answer_path(essay_question_answer) %>
         </h4>
-        <%= render 'crud_menus', essay_question_answer: essay_question_answer %>
+        <%= render 'crud_menus', essay_question_answer: essay_question_answer if current_user.own?(essay_question_answer) %>
         <ul class="list-inline">
           <li class="list-inline-item">
             <%= essay_question_answer.user.decorate.nickname %>

@@ -9,7 +9,7 @@
           <div class='row'>
             <div class='col-md-9'>
               <h3 class="d-inline"><%= @essay_question_answer.title %></h3>
-              <%= render 'crud_menus', essay_question_answer: @essay_question_answer %>
+              <%= render 'crud_menus', essay_question_answer: @essay_question_answer if current_user.own?(essay_question_answer) %>
               <ul class="list-inline">
                 <li class="list-inline-item">by <%= @essay_question_answer.user.decorate.nickname %></li>
                 <li class="list-inline-item"><%= l @essay_question_answer.created_at, format: :long  %></li>
