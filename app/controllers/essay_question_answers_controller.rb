@@ -42,7 +42,7 @@ class EssayQuestionAnswersController < ApplicationController
   private
 
   def find_essay_question_answer
-    @board = current_user.essay_question_answers.find(params[:id])
+    @essay_question_answer = current_user.essay_question_answers.find(params[:id])
   end
 
   def essay_question_answer_params

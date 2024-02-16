@@ -8,6 +8,9 @@ ja:
       require_login: 'ログインが必要です'
       created: "%{item}を作成しました"
       not_created: "%{item}の作成に失敗しました"
+      updated: "%{item}を更新しました"
+      not_updated: "%{item}の更新に失敗しました"
+      deleted: "%{item}を削除しました"
   users:
     new:
       title: 'ユーザー登録'
@@ -35,6 +38,8 @@ ja:
       title: '解決方法詳細'
     bookmarks:
       title: 'ブックマーク一覧'
+    edit:
+      title: '解決方法編集'
   profiles:
     show:
       title: 'プロフィール'
