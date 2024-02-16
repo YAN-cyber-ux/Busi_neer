@@ -4,12 +4,9 @@
       <%= image_tag 'board_placeholder.png', class: 'card-img-top', size: '300x200' %>
       <div class="card-body">
         <h4 class="card-title">
-          <a href="#">
-            <%= essay_question_answer.title %>
-          </a>
+        <%= link_to essay_question_answer.title, essay_question_answer_path(essay_question_answer) %>
         </h4>
-        <div class='mr10 float-right'>
-        </div>
+        <%= render 'crud_menus', essay_question_answer: essay_question_answer %>
         <ul class="list-inline">
           <li class="list-inline-item">
             <%= essay_question_answer.user.decorate.nickname %>

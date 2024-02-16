@@ -3,6 +3,7 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
+    post: '投稿'
     message:
       require_login: 'ログインが必要です'
       created: "%{item}を作成しました"
@@ -30,6 +31,8 @@ ja:
       no_results: '解決方法がありません'
     new:
       title: '解決方法作成'
+    show:
+      title: '解決方法詳細'
     bookmarks:
       title: 'ブックマーク一覧'
   profiles:
