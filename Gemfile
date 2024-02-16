@@ -19,6 +19,7 @@ gem 'pry-byebug'
 gem 'rails-i18n'
 gem 'draper'
 gem 'faker'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem "debug",   "1.7.1", platforms: %i[ mri mingw x64_mingw ]
