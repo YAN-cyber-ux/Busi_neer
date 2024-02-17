@@ -39,7 +39,9 @@ class EssayQuestionAnswersController < ApplicationController
     redirect_to essay_question_answers_path, status: :see_other, flash: { success: t('defaults.message.deleted', item: EssayQuestionAnswer.model_name.human) }
   end
 
-  def favorites; end
+  def favorites
+    @essay_question_answers = current_user.favorite_essay_question_answers.includes(:user).order(created_at: :desc)
+  end
 
   private
 

@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-12">
+    <div class="row">
+      <% if @favorite_essay_question_answers.present? %>
+        <%= render @favorite_essay_question_answers %>
+      <% else %>
+        <p><%= t('.no_result') %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
