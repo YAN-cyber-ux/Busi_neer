@@ -40,7 +40,7 @@ class EssayQuestionAnswersController < ApplicationController
   end
 
   def favorites
-    @essay_question_answers = current_user.favorite_essay_question_answers.includes(:user).order(created_at: :desc)
+    @favorite_essay_question_answers = current_user.favorite_essay_question_answers.includes(:user).order(created_at: :desc)
   end
 
   private
