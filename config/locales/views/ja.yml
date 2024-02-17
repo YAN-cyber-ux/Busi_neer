@@ -4,6 +4,7 @@ ja:
     register: '登録'
     logout: 'ログアウト'
     post: '投稿'
+    edit: '編集'
     message:
       require_login: 'ログインが必要です'
       created: "%{item}を作成しました"
@@ -49,3 +50,5 @@ ja:
   profiles:
     show:
       title: 'プロフィール'
+      edit:
+        title: 'プロフィール編集'

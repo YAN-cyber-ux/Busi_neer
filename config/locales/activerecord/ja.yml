@@ -10,6 +10,7 @@ ja:
         password_confirmation: 'パスワード確認'
         last_name: '姓'
         first_name: '名'
+        nickname: 'ニックネーム'
       essay_question_answer:
         title: 'タイトル'
         body: '本文'
