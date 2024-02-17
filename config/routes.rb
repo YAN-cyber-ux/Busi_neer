@@ -15,4 +15,5 @@ Rails.application.routes.draw do
     end
   end
   resources :favorites, only: %i[create destroy]
+  resource :profile, only: %i[show edit update]
 end
