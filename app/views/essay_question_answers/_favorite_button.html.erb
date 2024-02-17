@@ -1,0 +1,5 @@
+<% if current_user.favorite?(essay_question_answer) %>
+  <%= render 'unfavorite', {essay_question_answer: essay_question_answer} %>
+<% else %>
+  <%= render 'favorite', {essay_question_answer: essay_question_answer} %>
+<% end %>

@@ -36,10 +36,16 @@ ja:
       title: '解決方法作成'
     show:
       title: '解決方法詳細'
-    bookmarks:
-      title: 'ブックマーク一覧'
+    favorites:
+      title: 'お気に入り解決方法'
+      no_result: 'お気に入り解決方法がありません'
     edit:
       title: '解決方法編集'
+  favorites:
+    create:
+      success: 'お気に入りに追加しました'
+    destroy:
+      success: 'お気に入りを解除しました'
   profiles:
     show:
       title: 'プロフィール'

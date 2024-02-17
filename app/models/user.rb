@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
   has_many :essay_question_answers, dependent: :destroy
+  has_many :favorites, dependent: :destroy
+  has_many :favorite_essay_question_answers, through: :favorites, source: :essay_question_answer
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
@@ -13,4 +15,17 @@ class User < ApplicationRecord
   def own?(object)
     id == object.user_id
   end
+
+  def favorite(essay_question_answer)
+    favorite_essay_question_answers << essay_question_answer
+  end
+
+  def unfavorite(essay_question_answer)
+    favorite_essay_question_answers.destroy(essay_question_answer) #デバッグが必要
+  end
+
+  def favorite?(essay_question_answer)
+    favorite_essay_question_answers.include?(essay_question_answer)
+  end
+
 end

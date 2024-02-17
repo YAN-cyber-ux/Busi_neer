@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_02_15_052514) do
+ActiveRecord::Schema[7.0].define(version: 2024_02_17_065027) do
   create_table "essay_question_answers", force: :cascade do |t|
     t.string "title", null: false
     t.text "body", null: false
@@ -18,6 +18,16 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_15_052514) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_essay_question_answers_on_user_id"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "essay_question_answer_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["essay_question_answer_id"], name: "index_favorites_on_essay_question_answer_id"
+    t.index ["user_id", "essay_question_answer_id"], name: "index_favorites_on_user_id_and_essay_question_answer_id", unique: true
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -33,4 +43,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_15_052514) do
   end
 
   add_foreign_key "essay_question_answers", "users"
+  add_foreign_key "favorites", "essay_question_answers"
+  add_foreign_key "favorites", "users"
 end

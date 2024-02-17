@@ -8,6 +8,7 @@
         <li><%= link_to current_user.decorate.nickname, "#" %></li>
         <li><%= link_to (t'defaults.logout'), logout_path , data: { turbo_method: :delete } %></li>
         <li><%= link_to t('essay_question_answers.index.title'), essay_question_answers_path %></li>
+        <li><%= link_to t('essay_question_answers.favorites.title'), favorites_essay_question_answers_path %></li>
         <li><%= link_to t('essay_question_answers.new.title'), new_essay_question_answer_path %></li>
       </ul>
     </nav>
