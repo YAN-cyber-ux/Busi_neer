@@ -25,19 +25,21 @@ class EssayQuestionAnswersController < ApplicationController
 
   def edit; end
   
-    def update
-      if @essay_question_answer.update(essay_question_answer_params)
-        redirect_to essay_question_answers_path, status: :see_other, flash: { success: t('defaults.message.updated', item: EssayQuestionAnswer.model_name.human) }
-      else
-        flash.now[:danger] = t('defaults.message.not_updated', item: EssayQuestionAnswer.model_name.human)
-        render :edit, status: :unprocessable_entity
-      end
+  def update
+    if @essay_question_answer.update(essay_question_answer_params)
+      redirect_to essay_question_answers_path, status: :see_other, flash: { success: t('defaults.message.updated', item: EssayQuestionAnswer.model_name.human) }
+    else
+      flash.now[:danger] = t('defaults.message.not_updated', item: EssayQuestionAnswer.model_name.human)
+      render :edit, status: :unprocessable_entity
     end
+  end
   
-    def destroy
-      @essay_question_answer.destroy!
-      redirect_to essay_question_answers_path, status: :see_other, flash: { success: t('defaults.message.deleted', item: EssayQuestionAnswer.model_name.human) }
-    end
+  def destroy
+    @essay_question_answer.destroy!
+    redirect_to essay_question_answers_path, status: :see_other, flash: { success: t('defaults.message.deleted', item: EssayQuestionAnswer.model_name.human) }
+  end
+
+  def favorites; end
 
   private
 
