@@ -22,7 +22,7 @@ class User < ApplicationRecord
   end
 
   def unfavorite(essay_question_answer)
-    favorite_essay_question_answers.delete(essay_question_answer) #デバッグが必要
+    favorite_essay_question_answers.destroy(essay_question_answer)
   end
 
   def favorite?(essay_question_answer)
