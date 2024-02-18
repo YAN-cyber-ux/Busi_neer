@@ -20,9 +20,11 @@ gem 'rails-i18n'
 gem 'draper'
 gem 'faker'
 gem 'font-awesome-sass'
+gem 'config'
 
 group :development, :test do
   gem "debug",   "1.7.1", platforms: %i[ mri mingw x64_mingw ]
+  gem 'letter_opener_web', '1.3.4'
 end
 
 group :development do

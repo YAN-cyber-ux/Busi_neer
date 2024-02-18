@@ -1,4 +1,4 @@
-class UserDecorator < ApplicationDecorator
+class PasswordResetDecorator < ApplicationDecorator
   delegate_all
 
   # Define presentation-specific methods here. Helpers are accessed through
@@ -10,11 +10,4 @@ class UserDecorator < ApplicationDecorator
   #     end
   #   end
 
-  def full_name
-    "#{object.last_name} #{object.first_name}"
-  end
-
-  def nickname
-    "#{object.nickname}"
-  end
 end
